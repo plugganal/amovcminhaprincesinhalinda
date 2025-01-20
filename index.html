@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>te amoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+<audio id="bgMusic" autoplay loop preload="auto" playsinline>
+	<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</head>
+
+<body>
+
+<video id="bgVideo" autoplay muted loop playsinline>
+	<source src="video.mp4" type="video/mp4">
+</video>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*FELIZ ANIVERSÁRIO MINHA PRINCESA</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Oii meu amor, hoje é seu aniversário<br />
+			e eu estou muito orgulhoso da pessoa que eu encontrei para viver ao meu lado<br />
+			<span class="comments">// eu sou muito sortudo por te ter</span><br />
+			e eu espero que esse seja o primeiro de muitos aniversários que nós vamos passar juntos<br />
+			<span class="comments">// quero vc pra sempre</span><br />
+			tomara que vc tenha se divertido muuuito<br />
+			e que seu dia seja perfeito<br />
+			<span class="comments">// eu amo você do fundo do meu coração</span><br />
+			vc é a pessoa mais importante da minha vida<br />
+			nunca vou acreditar que tenho a menina mais perfeita comigo pra sempre<br />
+			ainda vou ter uma filinha linda com seu rostinho correndo pela nossa casa<br />
+			<span class="comments">// meu sonho</span><br />
+			vc merece tudo de bom... de verdade<br />
+			obrigado por todos os momentos que nós já vivemos juntos<br />
+			<span class="comments">// quero isso pra sempre tbm</span><br />
+			vc é a pessoa mais incrível que eu já conheci<br />
+			não quero te perder nunca<br />
+			você é muito especial pra mim<br />
+			e aconteça o que acontecer<br />
+			eu sempre vou estar ao seu lado!<br />
+			<br />
+			Tudo o que eu quero é te fazer feliz<br />
+			<span class="comments">// vc fica mt linda felizinha</span><br />
+			<br />
+			Agora eu só queria poder te abraçar e beijar o resto da minha vida<br />
+			<span class="comments">// você sempre vai ser a minha princesa.</span><br />
+			<br />
+			Eu sempre vou amar vc<br />
+			sempre vou querer você ao meu lado<br />
+			você me faz o garoto mais feliz do mundo<br />
+			e estar com você sempre melhora todos os meus dias<br />
+			<span class="comments">// você vai sempre ser o meu sonho</span><br />
+			e viver a minha vida com vc é tudo pra mim<br />
+			<br />
+			eu nunca vou me esquecer de nenhum momento que nós vivemos juntos<br />
+			nenhum eu te amo que vc me disse<br />
+			nenhum beijinho que vc me deu<br />
+			<span class="comments">// isso tudo sempre vai ser especial pra mim</span><br />
+			você sempre vai ser especial pra mim<br />
+			<br />
+			eu nunca pensei que faria uma coisa dessas pra alguém<br />
+			nunca pensei em ter filhos<br />
+			ou me casar com alguém<br />
+			nunca pensei que teria vc comigo<br />
+			<span class="comments">// obrigado por fazer a minha vida feliz</span><br />
+			obrigado por me tornar uma pessoa melhor a cada dia<br />
+			<br />
+			eu amo cada pedaço seu.<br />
+			<span class="comments">// amo seus olhinhos lindos</span><br />
+			amo seu cabelo cacheado<br />
+			amo sua boca<br />
+			amo o formato do seu rosto<br />
+			amo suas bochechonas<br />
+			amo seu sorriso<br />
+			amo sua voz<br />
+			<span class="comments">// amo quando vc ri comigo</span><br />
+			amo quando vc fica carentezinha<br />
+			amo quando vc fica manhosa<br />
+			amo quando me da beijinhos e diz que me ama<br />
+			<span class="comments">// amo cada detalhe seu</span><br />
+			<br />
+			<span id="heartspan">
+			<a href="gEEmlIr.png"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Sara
+					<div id="elapseClock"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2008, 0, 17);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	// Inicializar música
+	var bgMusic = document.getElementById('bgMusic');
+	bgMusic.volume = 0.33;
+	
+	// Tentar tocar a música de várias formas
+	function tryPlayMusic() {
+		bgMusic.play().catch(function(error) {
+			setTimeout(tryPlayMusic, 1000);
+		});
+	}
+	
+	// Tentar tocar no carregamento
+	tryPlayMusic();
+	
+	// Tentar tocar no clique
+	document.addEventListener('click', function() {
+		tryPlayMusic();
+	}, { once: true });
+	
+	// Tentar tocar no scroll
+	document.addEventListener('scroll', function() {
+		tryPlayMusic();
+	}, { once: true });
+	
+	// Tentar tocar no mousemove
+	document.addEventListener('mousemove', function() {
+		tryPlayMusic();
+	}, { once: true });
+
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>

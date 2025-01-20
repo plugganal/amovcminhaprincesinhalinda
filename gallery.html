@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nossas Memórias ❤</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            cursor: pointer;
+        }
+        #imageDisplay {
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <img id="imageDisplay" src="" alt="Memória">
+    
+    <script>
+        let images = [];
+        let currentIndex = -1;
+
+        // Função para carregar a lista de imagens da pasta @images
+        async function loadImagesList() {
+            try {
+                const response = await fetch('list-images.php');
+                images = await response.json();
+                showRandomImage();
+            } catch (error) {
+                console.error('Erro ao carregar imagens:', error);
+            }
+        }
+
+        // Função para mostrar uma imagem aleatória
+        function showRandomImage() {
+            if (images.length > 0) {
+                let newIndex;
+                do {
+                    newIndex = Math.floor(Math.random() * images.length);
+                } while (newIndex === currentIndex && images.length > 1);
+                
+                currentIndex = newIndex;
+                document.getElementById('imageDisplay').src = '@images/' + images[currentIndex];
+            }
+        }
+
+        // Iniciar o carregamento das imagens
+        loadImagesList();
+
+        // Adicionar evento de clique para trocar a imagem
+        document.body.addEventListener('click', showRandomImage);
+    </script>
+</body>
+</html> 
